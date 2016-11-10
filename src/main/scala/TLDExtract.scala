@@ -46,9 +46,9 @@ object SplitHost {
 
 object TLDExtract extends App {
   def splitFromArgs() {
-    val url = args(0)
-    val split = SplitHost.fromURL(url)
-    println(split.productIterator mkString (" "))
+    val url = "http://www.youtube.com/user/EvidentEmpireMedia"
+    val split = SplitHost.fromURL(url).domain
+    println(split)
   }
 
   splitFromArgs()
